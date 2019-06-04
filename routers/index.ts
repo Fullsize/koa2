@@ -1,15 +1,11 @@
 const router = require('koa-router')();
 const fs = require('fs')
-const path = require('path')
-const 
+const path = require('path');
+// 首页逻辑处理
+const indexRequset=require('../controllers/index.ts');
 const files = fs.readdirSync(__dirname);
 
-//首页
-const home = require('koa-router')();
-home.get('/', (ctx, next) => {
-  
-});
-router.use('', home.routes(), home.allowedMethods());
+
 
 
 files
@@ -22,4 +18,10 @@ files
     }
   })
 
+// 首页
+const home = require('koa-router')();
+home.get('/', (ctx, next) => {
+  indexRequset.log(ctx)
+});
+router.use('', home.routes(), home.allowedMethods());
 module.exports = router;
