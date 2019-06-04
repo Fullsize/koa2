@@ -21,7 +21,4 @@ app.use(router.routes())
 // router.allowedMethods()作用： 这是官方文档的推荐用法,
 app.use(router.allowedMethods());
 
-
-
-
 app.listen(3300);

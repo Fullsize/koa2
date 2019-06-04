@@ -1,8 +1,17 @@
 const router = require('koa-router')();
 const fs = require('fs')
 const path = require('path')
+const 
+const files = fs.readdirSync(__dirname);
 
-const files = fs.readdirSync(__dirname)
+//首页
+const home = require('koa-router')();
+home.get('/', (ctx, next) => {
+  
+});
+router.use('', home.routes(), home.allowedMethods());
+
+
 files
   .filter(file => ~file.search(/^[^\.].*\.ts$/))
   .forEach(file => {
@@ -12,4 +21,5 @@ files
       router.use(`/${file_name}`, file_entity.routes(), file_entity.allowedMethods())
     }
   })
+
 module.exports = router;
