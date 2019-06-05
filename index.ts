@@ -1,17 +1,17 @@
 // 引入koa
-const Koa = require('koa');
+import Koa from 'koa';
 
 // 启用koa2
 const app = new Koa();
 
 // 引用文件模块
-const fs = require('fs');
+import fs from 'fs';
 
 // 自定义中间件
-const loggerGennerator = require('./middleware/logger-generator.js');
+import loggerGennerator from './middleware/logger-generator.ts';
 
 // 引入router
-const router = require('./routers/index.ts');
+import router from './routers/index.ts';
 
 // 加载中间件
 app.use(loggerGennerator())
