@@ -12,9 +12,9 @@ files
   .filter(file => ~file.search(/^[^\.].*\.ts$/))
   .forEach(file => {
     const file_name = file.substr(0, file.length - 3);
-    const file_entity = require(path.join(__dirname, file));
+    const file_entity =require(path.join(__dirname, file))
     if (file_name !== 'index') {
-      router.use(`/${file_name}`, file_entity.routes(), file_entity.allowedMethods())
+      router.use(`/${file_name}`, file_entity.default.routes(), file_entity.default.allowedMethods())
     }
   })
 
