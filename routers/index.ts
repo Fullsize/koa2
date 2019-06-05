@@ -1,8 +1,8 @@
 const router = require('koa-router')();
-const fs = require('fs')
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 // 首页逻辑处理
-const indexRequset=require('../controllers/index.ts');
+import indexRequset from '../controllers/index.ts';
 const files = fs.readdirSync(__dirname);
 
 
@@ -24,4 +24,4 @@ home.get('/', (ctx, next) => {
   indexRequset.log(ctx)
 });
 router.use('', home.routes(), home.allowedMethods());
-module.exports = router;
+export default router;
