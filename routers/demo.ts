@@ -1,4 +1,5 @@
-const router = require('koa-router')()
+import Router from 'koa-router';
+const router=Router();
 
 router.get('/', function (ctx, next) {
   ctx.body = 'demo'

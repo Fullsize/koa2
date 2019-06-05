@@ -13,8 +13,12 @@ import loggerGennerator from './middleware/logger-generator.ts';
 // 引入router
 import router from './routers/index.ts';
 
+// body-parser中间件
+import bodyParser from 'koa-bodyparser';
+
 // 加载中间件
 app.use(loggerGennerator())
+app.use(bodyParser())
 
 // 启用路由
 app.use(router.routes())
