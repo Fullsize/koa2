@@ -23,6 +23,10 @@ const log = (ctx) => {
     ctx.body = '<h1>404！！！ o(╯□╰)o</h1>'
   }
 }
+const getCtx=(ctx)=>{
+  ctx.body=ctx;
+}
 export default {
-  log
+  log,
+  getCtx
 }
