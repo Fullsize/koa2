@@ -1,5 +1,5 @@
 const log=(ctx)=>{
-	return ctx
+	console.log(ctx.method,ctx.header.host+ctx.url)
 }
 export default function(){
 	return async function(ctx,next){

@@ -5,7 +5,6 @@ const router=Router();
 router.get('/', (ctx, next) => {
   indexRequset.log(ctx)
 });
-
 router.post('/', (ctx, next) => {
   indexRequset.log(ctx)
 });
