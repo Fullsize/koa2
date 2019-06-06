@@ -2,8 +2,6 @@ import Router from 'koa-router';
 const router=Router();
 import fs from 'fs';
 import path from 'path';
-// 首页逻辑处理
-
 const files = fs.readdirSync(__dirname);
 
 
