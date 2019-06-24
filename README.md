@@ -1,4 +1,6 @@
 # koa2
 koa2使用
 
-node start启动
+http://localhost:3300
+
+node start.ts启动
