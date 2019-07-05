@@ -17,6 +17,16 @@
   },
   "homepage": "https://github.com/ZhouYuTao2017/koa2#readme",
   "dependencies": {
-    "koa": "^2.7.0"
+    "ejs": "^2.6.2",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
   }
 }
