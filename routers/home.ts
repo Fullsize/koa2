@@ -2,8 +2,11 @@
 import indexRequset from '../controllers/home.ts';
 import Router from 'koa-router';
 const router=Router();
-router.get('/', (ctx, next) => {
-  indexRequset.log(ctx)
+router.get('/', async (ctx, next) => {
+  let title = 'hello koa2'
+  await ctx.render('index', {
+    title,
+  })
 });
 
 router.post('/', (ctx, next) => {
